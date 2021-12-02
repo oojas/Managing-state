@@ -1,5 +1,4 @@
-
-
+import 'package:backendpractice/Get_X/incrementar.dart';
 import 'package:backendpractice/Get_X/next.dart';
 import 'package:backendpractice/Get_X/services/api_service.dart';
 import 'package:flutter/material.dart';
@@ -16,9 +15,15 @@ class mainscreen extends StatefulWidget {
 class _mainscreenState extends State<mainscreen> {
   @override
   final getDetails = Get.put(details());
-      
+  final increment = Get.put(Increment());
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          increment.increment();
+        },
+        child: Icon(Icons.add),
+      ),
       appBar: AppBar(
         title: Text('Home Screen'),
         centerTitle: true,
@@ -37,7 +42,10 @@ class _mainscreenState extends State<mainscreen> {
           SizedBox(
             height: 20,
           ),
-          Text('ojas ${getDetails.age}')
+          Text('ojas ${getDetails.age}'),
+          Obx(() {
+            return Text('${increment.count}');
+          })
         ],
       )),
     );

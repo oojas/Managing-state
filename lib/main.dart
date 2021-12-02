@@ -1,7 +1,5 @@
-
 import 'package:backendpractice/Get_X/home.dart';
 import 'package:backendpractice/providers/additem.dart';
-import 'package:backendpractice/providers/homescreen.dart';
 import 'package:backendpractice/providers/shopname.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
