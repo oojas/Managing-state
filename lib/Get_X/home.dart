@@ -1,4 +1,7 @@
-import 'package:backendpractice/get/next.dart';
+
+
+import 'package:backendpractice/Get_X/next.dart';
+import 'package:backendpractice/Get_X/services/api_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -12,6 +15,8 @@ class mainscreen extends StatefulWidget {
 
 class _mainscreenState extends State<mainscreen> {
   @override
+  final getDetails = Get.put(details());
+      
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -25,6 +30,16 @@ class _mainscreenState extends State<mainscreen> {
               icon: Icon(Icons.arrow_right))
         ],
       ),
+      body: Center(
+          child: Column(
+        children: [
+          Text(getDetails.name),
+          SizedBox(
+            height: 20,
+          ),
+          Text('ojas ${getDetails.age}')
+        ],
+      )),
     );
   }
 }

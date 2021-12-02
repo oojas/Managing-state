@@ -1,4 +1,5 @@
-import 'package:backendpractice/get/home.dart';
+
+import 'package:backendpractice/Get_X/home.dart';
 import 'package:backendpractice/providers/additem.dart';
 import 'package:backendpractice/providers/homescreen.dart';
 import 'package:backendpractice/providers/shopname.dart';
